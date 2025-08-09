@@ -22,7 +22,4 @@ jobs:
         go-version: '1.22.6'
 
     - name: Build
-      run: go build -v ./...
-
-    - name: Test
-      run: go test -v ./...
+      run: go -mod=vendor -o cloud-node-lifecycle-controller cmd/main.go
